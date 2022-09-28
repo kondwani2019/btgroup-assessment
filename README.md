@@ -2,12 +2,6 @@
 
 This is a Spring boot application.
 
-
-## Build the project 
-### 1)  After cloning cd into btgroup-assessment
-### 2)  Run mvn clean install
-
-
 ## Run as follows
 
 ### 1) chmod a+x bt-financial-assessment.sh

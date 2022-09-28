@@ -20,12 +20,6 @@ import com.btfinancialgroup.provider.dto.BlogPost;
 import com.btfinancialgroup.provider.dto.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-/**
- * Verify that if my Feign Client returns correct results then I will get the correct results from my Service
- * 
- * @author kondwani
- *
- */
 @ExtendWith(MockitoExtension.class)
 public class BtAssessmentServiceTest {
 
@@ -40,6 +34,11 @@ public class BtAssessmentServiceTest {
 	}
 	
 	@Test
+	/**
+	 * Verify that if my Feign Client returns correct results 
+	 * then I will get the correct results from my Service
+	 *
+	 */
 	public void testGetUser() {
 		User expectedUserResult = new User();
 		expectedUserResult.setId(1L);
@@ -68,6 +67,11 @@ public class BtAssessmentServiceTest {
 		assertEquals("Jim", foundUsers.get(0).getName());
 	}
 	
+	/**
+	 * Verify that if my Feign Client returns correct results 
+	 * then I will get the correct results from my Service
+	 *
+	 */
 	@Test
 	public void testGetPost() {
 		BlogPost blogResult = new BlogPost();
@@ -102,6 +106,10 @@ public class BtAssessmentServiceTest {
 		assertEquals(blogTitle, foundBlogs.get(0).getTitle());
 	}
 	
+	/**
+	 * Verify that json strings can be unmarshalled
+	 *
+	 */
 	@Test
 	public void testUnmarshalUser() throws IOException {
 		ClassLoader classLoader = getClass().getClassLoader();
@@ -111,6 +119,11 @@ public class BtAssessmentServiceTest {
 		assertEquals("Leanne Graham", user.getName());
 	}
 	
+	
+	/**
+	 * Verify that json strings can be unmarshalled
+	 *
+	 */
 	@Test
 	public void testUnmarshalBlogPost() throws IOException {
 		ClassLoader classLoader = getClass().getClassLoader();
