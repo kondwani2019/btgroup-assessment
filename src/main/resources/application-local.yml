@@ -1,0 +1,9 @@
+datasource:
+  db:
+    username: postgres
+    password: password
+    jdbcUrl: jdbc:postgresql://127.0.0.1:5432/yorpay  
+    driverClassName: org.postgresql.Driver
+api:
+  provider:
+    url: https://jsonplaceholder.typicode.com

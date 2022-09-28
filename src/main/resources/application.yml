@@ -1,0 +1,10 @@
+server:
+  port: 9033
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+feign:
+  autoconfiguration:
+    jackson:
+      enabled: true
