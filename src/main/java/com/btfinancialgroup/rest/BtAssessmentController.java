@@ -30,32 +30,32 @@ public class BtAssessmentController {
 		this.btAssessmentService = btAssessmentService;
 	}
 
-    @GetMapping(value = "/users")
-    @Produces({MediaType.APPLICATION_JSON})
+	@GetMapping(value = "/users")
+	@Produces({ MediaType.APPLICATION_JSON })
 	public ResponseEntity<List<User>> getUsers() {
-    	List<User> users = btAssessmentService.getUsers();
-    	return ResponseEntity.status(HttpStatus.OK).body(users);
+		List<User> users = btAssessmentService.getUsers();
+		return ResponseEntity.status(HttpStatus.OK).body(users);
 	}
 
-    @GetMapping(path = "/users/{id}")
-    @Produces({MediaType.APPLICATION_JSON})
-	public ResponseEntity<User> getUser(@PathVariable(name = "id", required = false)Long id) {
-    	User user = btAssessmentService.getUser(id);
-    	return ResponseEntity.status(HttpStatus.OK).body(user);
+	@GetMapping(path = "/users/{id}")
+	@Produces({ MediaType.APPLICATION_JSON })
+	public ResponseEntity<User> getUser(@PathVariable(name = "id", required = false) Long id) {
+		User user = btAssessmentService.getUser(id);
+		return ResponseEntity.status(HttpStatus.OK).body(user);
 	}
 
-    @GetMapping(value = "/posts")
-    @Produces({MediaType.APPLICATION_JSON})
+	@GetMapping(value = "/posts")
+	@Produces({ MediaType.APPLICATION_JSON })
 	public ResponseEntity<List<BlogPost>> getPosts() {
-    	List<BlogPost> posts = btAssessmentService.getPosts();
-    	return ResponseEntity.status(HttpStatus.OK).body(posts);
+		List<BlogPost> posts = btAssessmentService.getPosts();
+		return ResponseEntity.status(HttpStatus.OK).body(posts);
 	}
 
-    @GetMapping(path = "/posts/{id}")
-    @Produces({MediaType.APPLICATION_JSON})
-	public ResponseEntity<BlogPost> getPosts(@PathVariable(name = "id", required = false)Long id) {
-    	BlogPost post = btAssessmentService.getPost(id);
-    	return ResponseEntity.status(HttpStatus.OK).body(post);
+	@GetMapping(path = "/posts/{id}")
+	@Produces({ MediaType.APPLICATION_JSON })
+	public ResponseEntity<BlogPost> getPosts(@PathVariable(name = "id", required = false) Long id) {
+		BlogPost post = btAssessmentService.getPost(id);
+		return ResponseEntity.status(HttpStatus.OK).body(post);
 	}
-	
+
 }
